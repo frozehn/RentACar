@@ -17,11 +17,22 @@ public class BookingSystem implements BookingSystemInterface
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     //Declaration of variables
+    boolean Continue = true;
     
     //
     public static void main (String[] args)
     {
+        while(Continue)
+                {
+                    System.out.println("");
+                }
+        
+        
+        
+        
+        
+        
+        
         
     }
-    
 }

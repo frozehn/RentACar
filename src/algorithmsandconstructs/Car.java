@@ -17,6 +17,9 @@ public abstract class Car implements CarInterface
     private boolean isAvailable;
     private double rate;
     private int ID;
+    private int day;
+    private int month;
+    private int year;
     //Constructor
     public Car()
     {
@@ -26,6 +29,9 @@ public abstract class Car implements CarInterface
         this.isAvailable = isAvailable;
         this.rate = rate;
         this.ID = ID;
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
     //Method for creating Availability
     public boolean createAvailability()
@@ -79,10 +85,38 @@ public abstract class Car implements CarInterface
         return ID;
     }
     //Method for checking the condition if available or not
+    public int getDay()
+    {
+        return day;
+    }
+    public void setDay (int NewDay)
+    {
+        day = NewDay;
+    }
+    public int getMonth()
+    {
+        return month;
+    }
+    public void setMonth (int NewMonth)
+    {
+        day = NewMonth;
+    }
+    public int getYear()
+    {
+        return year;
+    }
+    public void setYear (int NewYear)
+    {
+        day = NewYear;
+    }    
     @Override
     public boolean isAvailable(Month month, int day)
     {
-        return isAvailable;
+        if (day == 0)
+        {
+           return isAvailable = true; 
+        }
+        return isAvailable = false;
     }
     @Override
     public boolean book(Month month, int day)
