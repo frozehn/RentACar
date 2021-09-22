@@ -1,4 +1,3 @@
-
 package algorithmsandconstructs;
 
 import algorithmsandconstructs.enums.Make;
@@ -7,14 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentACar implements RentACarInterface {
-    
+
     List<CarInterface> cars;
     String name;
-    
-    public RentACar(){
+
+    public RentACar() {
         cars = new ArrayList<>(); //initialize empty arraylist to store list of cars
         name = "CCT Car Rental  ";
     }
+
     @Override
     public List<CarInterface> getCars() {
 
@@ -38,7 +38,14 @@ public class RentACar implements RentACarInterface {
 
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
-        if ()
+
+        for (CarInterface c : cars) {
+            if (c.getMake().equals(make)) {
+                   c.getAvailability();
+            }
+            return true;
+        }       
+            return false;
     }
 
     @Override
@@ -55,5 +62,5 @@ public class RentACar implements RentACarInterface {
     public int getNumberOfCars() {
         return cars.size();
     }
-    
+
 }
