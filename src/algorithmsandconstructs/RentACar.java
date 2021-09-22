@@ -13,7 +13,7 @@ public class RentACar implements RentACarInterface {
     
     public RentACar(){
         cars = new ArrayList<>(); //initialize empty arraylist to store list of cars
-        name = "CCT Car Rental";
+        name = "CCT Car Rental  ";
     }
     @Override
     public List<CarInterface> getCars() {
